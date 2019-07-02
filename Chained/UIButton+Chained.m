@@ -132,9 +132,9 @@ typedef void(^ButtonAction)(UIButton *button);
     }
 }
 
-- (void)setButtonAction:(void (^)(UIButton *))buttonAction{
+- (void)setAction:(ButtonAction)action{
     
-    objc_setAssociatedObject(self, &buttonActionKey, buttonAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
+     objc_setAssociatedObject(self, &buttonActionKey, action, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (ButtonAction)action{

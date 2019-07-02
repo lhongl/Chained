@@ -102,9 +102,9 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
     }
 }
 
-- (void)setTapGest:(void (^)(UITapGestureRecognizer *))tapGest{
+- (void)setTapGest:(TapAction)tapGest{
     
-    objc_setAssociatedObject(self, &tapGestKey, tapGest, OBJC_ASSOCIATION_COPY_NONATOMIC);
+     objc_setAssociatedObject(self, &tapGestKey, tapGest, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (TapAction)tapGest{
