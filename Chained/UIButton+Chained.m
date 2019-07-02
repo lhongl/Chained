@@ -43,6 +43,14 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
 
+- (UIButton *(^)(UIColor *color))fdBackColor{
+    
+    return ^(UIColor *color){
+        self.backgroundColor = color;
+        return self;
+    };
+}
+
 - (UIButton *(^)(UIImage *image,UIControlState state))fdImage{
     
     return ^(UIImage *image,UIControlState state){

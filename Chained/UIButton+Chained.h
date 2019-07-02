@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIButton *(^)(CGRect rect))fdRect;
 
+- (UIButton *(^)(UIColor *color))fdBackColor;
+
 - (UIButton *(^)(NSString *title,UIControlState state))fdTitle;
 
 - (UIButton *(^)(UIImage *image,UIControlState state))fdImage;
