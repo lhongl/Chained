@@ -8,8 +8,11 @@
 
 #import "UIButton+Chained.h"
 #import <objc/runtime.h>
+
 static const NSString *buttonActionKey = @"buttonActionKey";
+
 typedef void(^ButtonAction)(UIButton *button);
+
 @interface UIButton ()
 
 @property (nonatomic, copy)ButtonAction action;
@@ -123,7 +126,7 @@ typedef void(^ButtonAction)(UIButton *button);
 
 - (void)setButtonAction:(void (^)(UIButton *))buttonAction{
     
-    objc_setAssociatedObject(self, &buttonActionKey, buttonAction, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &buttonActionKey, buttonAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (ButtonAction)action{

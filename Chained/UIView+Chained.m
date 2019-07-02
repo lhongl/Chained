@@ -8,8 +8,11 @@
 
 #import "UIView+Chained.h"
 #import <objc/runtime.h>
+
 static  NSString *tapGestKey = @"tapGestKey";
+
 typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
+
 @interface UIView ()
 
 @property (nonatomic, copy) TapAction tapGest;
@@ -101,7 +104,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
 
 - (void)setTapGest:(void (^)(UITapGestureRecognizer *))tapGest{
     
-    objc_setAssociatedObject(self, &tapGestKey, tapGest, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &tapGestKey, tapGest, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (TapAction)tapGest{
