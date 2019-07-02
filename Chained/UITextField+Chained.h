@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UITextField *(^)(CGFloat fontSize))fdFont;
 
+- (UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType;
+
 - (UITextField *(^)(BOOL enabled))fdEnabled;
 
 - (UITextField *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;

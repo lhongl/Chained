@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UITextView *(^)(CGFloat fontSize))fdFont;
 
+- (UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType;
+
+- (UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode;
+
 - (UITextView *(^)(NSTextAlignment textAlignment))fdTextAlignment;
 
 - (UITextView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;

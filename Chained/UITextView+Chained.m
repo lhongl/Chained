@@ -40,6 +40,22 @@
     };
 }
 
+- (UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode{
+    
+    return ^(UIScrollViewKeyboardDismissMode keyboardDismissMode){
+        self.keyboardDismissMode = keyboardDismissMode;
+        return self;
+    };
+}
+
+- (UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType{
+    
+    return ^(UIKeyboardType keyboardType){
+        self.keyboardType = keyboardType;
+        return self;
+    };
+}
+
 - (UITextView *(^)(UIColor *textColor))fdTextColor{
     
     return ^(UIColor *textColor){

@@ -58,6 +58,14 @@
     };
 }
 
+- (UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType{
+    
+    return ^(UIKeyboardType keyboardType){
+        self.keyboardType = keyboardType;
+        return self;
+    };
+}
+
 - (UITextField *(^)(NSTextAlignment textAlignment))fdTextAlignment{
     
     return ^(NSTextAlignment textAlignment){
