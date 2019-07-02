@@ -19,6 +19,7 @@
 		65CF064622C9D977007B4F5E /* UILabel+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064522C9D977007B4F5E /* UILabel+Chained.m */; };
 		65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */; };
 		65CF064C22C9E2DD007B4F5E /* UIButton+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */; };
+		65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF069322CAEC29007B4F5E /* UITextView+Chained.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Chained.m"; sourceTree = "<group>"; };
 		65CF064A22C9E2DD007B4F5E /* UIButton+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chained.h"; sourceTree = "<group>"; };
 		65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chained.m"; sourceTree = "<group>"; };
+		65CF069222CAEC29007B4F5E /* UITextView+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Chained.h"; sourceTree = "<group>"; };
+		65CF069322CAEC29007B4F5E /* UITextView+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Chained.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				65CF061022C9D7B4007B4F5E /* AppDelegate.m */,
 				65CF061222C9D7B4007B4F5E /* ViewController.h */,
 				65CF061322C9D7B4007B4F5E /* ViewController.m */,
+				65CF069222CAEC29007B4F5E /* UITextView+Chained.h */,
+				65CF069322CAEC29007B4F5E /* UITextView+Chained.m */,
 				65CF064122C9D7D1007B4F5E /* UIView+Chained.h */,
 				65CF064222C9D7D1007B4F5E /* UIView+Chained.m */,
 				65CF064A22C9E2DD007B4F5E /* UIButton+Chained.h */,
@@ -286,6 +291,7 @@
 				65CF064622C9D977007B4F5E /* UILabel+Chained.m in Sources */,
 				65CF061F22C9D7B5007B4F5E /* main.m in Sources */,
 				65CF061122C9D7B4007B4F5E /* AppDelegate.m in Sources */,
+				65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */,
 				65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */,
 				65CF064C22C9E2DD007B4F5E /* UIButton+Chained.m in Sources */,
 				65CF064322C9D7D1007B4F5E /* UIView+Chained.m in Sources */,

@@ -9,7 +9,7 @@
 #import "UIView+Chained.h"
 #import <objc/runtime.h>
 static  NSString *tapGestKey = @"tapGestKey";
-
+typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
 @interface UIView ()
 
 @property (nonatomic, copy) TapAction tapGest;
@@ -76,15 +76,21 @@ static  NSString *tapGestKey = @"tapGestKey";
 }
 
 
-- (UIView *(^)(TapAction))fdAddTapGestureRecognizer{
-    
-    return ^(TapAction tapAc){
-        self.tapGest =  tapAc;
-        UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestAction:)];
+- (UIView *(^)(SEL action))fdAddTagerAction{
+    return ^(SEL action){
+        UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:action];
         self.userInteractionEnabled = YES;
         [self addGestureRecognizer:tapGest];
         return self;
     };
+}
+
+
+- (void)fdAddTargetAction:(void(^)(UITapGestureRecognizer *TapGest))action{
+    self.tapGest =  action;
+    UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestAction:)];
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:tapGest];
 }
 
 - (void)tapGestAction:(UITapGestureRecognizer *)tapGest{

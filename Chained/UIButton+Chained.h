@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIButton *(^)(UIButtonType buttonType))initButton;
 
+- (UIButton *(^)(CGRect rect))fdRect;
+
 - (UIButton *(^)(NSString *title,UIControlState state))fdTitle;
 
 - (UIButton *(^)(UIImage *image,UIControlState state))fdImage;
@@ -33,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIButton *(^)(CGFloat radius))fdRadius;
 
 - (UIButton *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+
+- (void)fdAddTargetAction:(UIControlEvents)controlEvents buttonAction:(void(^)(UIButton *button))action;
 
 @end
 

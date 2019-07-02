@@ -7,7 +7,14 @@
 //
 
 #import "UIButton+Chained.h"
+#import <objc/runtime.h>
+static const NSString *buttonActionKey = @"buttonActionKey";
+typedef void(^ButtonAction)(UIButton *button);
+@interface UIButton ()
 
+@property (nonatomic, copy)ButtonAction action;
+
+@end
 @implementation UIButton (Chained)
 
 + (UIButton *(^)(UIButtonType buttonType))initButton{
@@ -15,6 +22,14 @@
     return ^(UIButtonType buttonType){
         
         return [UIButton buttonWithType:buttonType];
+    };
+}
+
+- (UIButton *(^)(CGRect rect))fdRect{
+    
+    return ^(CGRect rect){
+        self.frame = rect;
+        return self;
     };
 }
                 
@@ -92,6 +107,28 @@
         [self.layer setMasksToBounds:YES];
         return self;
     };
+}
+
+
+- (void)fdAddTargetAction:(UIControlEvents)controlEvents buttonAction:(void(^)(UIButton *button))action{
+    self.action  = action;
+    [self addTarget:self action:@selector(buttonAction:) forControlEvents:controlEvents];
+}
+
+- (void)buttonAction:(UIButton *)button{
+    if (self.action) {
+        self.action(button);
+    }
+}
+
+- (void)setButtonAction:(void (^)(UIButton *))buttonAction{
+    
+    objc_setAssociatedObject(self, &buttonActionKey, buttonAction, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (ButtonAction)action{
+    
+    return objc_getAssociatedObject(self, &buttonActionKey);
 }
 
 @end

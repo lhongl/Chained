@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-typedef void(^TapAction)(UITapGestureRecognizer *tap);
 
 @interface UIView (Chained)
 
@@ -27,7 +26,9 @@ typedef void(^TapAction)(UITapGestureRecognizer *tap);
 
 - (UIView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
-- (UIView *(^)(TapAction))fdAddTapGestureRecognizer;
+- (UIView *(^)(SEL action))fdAddTagerAction;
+
+- (void)fdAddTargetAction:(void(^)(UITapGestureRecognizer *TapGest))action;
 
 @end
 

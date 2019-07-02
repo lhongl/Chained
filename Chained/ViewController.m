@@ -23,7 +23,6 @@
     newView.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:newView];
 
-    
     // Do any additional setup after loading the view.
 }
 
