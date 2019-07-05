@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6503AB5C22CF23AE00E0B1BA /* HLChainedHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLChainedHeader.h; sourceTree = "<group>"; };
 		65CF060C22C9D7B4007B4F5E /* Chained.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chained.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CF060F22C9D7B4007B4F5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65CF061022C9D7B4007B4F5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 				65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */,
 				65CF064422C9D977007B4F5E /* UILabel+Chained.h */,
 				65CF064522C9D977007B4F5E /* UILabel+Chained.m */,
+				6503AB5C22CF23AE00E0B1BA /* HLChainedHeader.h */,
 				65CF061522C9D7B4007B4F5E /* Main.storyboard */,
 				65CF061822C9D7B5007B4F5E /* Assets.xcassets */,
 				65CF061A22C9D7B5007B4F5E /* LaunchScreen.storyboard */,
