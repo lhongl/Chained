@@ -20,6 +20,8 @@
 		65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */; };
 		65CF064C22C9E2DD007B4F5E /* UIButton+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */; };
 		65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF069322CAEC29007B4F5E /* UITextView+Chained.m */; };
+		65E936B122D49BD900A7A960 /* NSMutableParagraphStyle+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */; };
+		65E936B222D49BD900A7A960 /* NSMutableDictionary+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chained.m"; sourceTree = "<group>"; };
 		65CF069222CAEC29007B4F5E /* UITextView+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Chained.h"; sourceTree = "<group>"; };
 		65CF069322CAEC29007B4F5E /* UITextView+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Chained.m"; sourceTree = "<group>"; };
+		65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableParagraphStyle+Chained.m"; sourceTree = "<group>"; };
+		65E936AE22D49BD900A7A960 /* NSMutableParagraphStyle+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableParagraphStyle+Chained.h"; sourceTree = "<group>"; };
+		65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AttributedString.m"; sourceTree = "<group>"; };
+		65E936B022D49BD900A7A960 /* NSMutableDictionary+AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AttributedString.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,10 @@
 				65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */,
 				65CF064422C9D977007B4F5E /* UILabel+Chained.h */,
 				65CF064522C9D977007B4F5E /* UILabel+Chained.m */,
+				65E936B022D49BD900A7A960 /* NSMutableDictionary+AttributedString.h */,
+				65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */,
+				65E936AE22D49BD900A7A960 /* NSMutableParagraphStyle+Chained.h */,
+				65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */,
 				6503AB5C22CF23AE00E0B1BA /* HLChainedHeader.h */,
 				65CF061522C9D7B4007B4F5E /* Main.storyboard */,
 				65CF061822C9D7B5007B4F5E /* Assets.xcassets */,
@@ -289,9 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E936B222D49BD900A7A960 /* NSMutableDictionary+AttributedString.m in Sources */,
 				65CF061422C9D7B4007B4F5E /* ViewController.m in Sources */,
 				65CF064622C9D977007B4F5E /* UILabel+Chained.m in Sources */,
 				65CF061F22C9D7B5007B4F5E /* main.m in Sources */,
+				65E936B122D49BD900A7A960 /* NSMutableParagraphStyle+Chained.m in Sources */,
 				65CF061122C9D7B4007B4F5E /* AppDelegate.m in Sources */,
 				65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */,
 				65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */,

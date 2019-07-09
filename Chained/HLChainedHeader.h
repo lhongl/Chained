@@ -14,6 +14,7 @@
 #import "UIButton+Chained.h"
 #import "UIView+Chained.h"
 #import "UITextView+Chained.h"
-
+#import "NSMutableDictionary+AttributedString.h"
+#import "NSMutableParagraphStyle+Chained.h"
 
 #endif /* HLChainedHeader_h */
