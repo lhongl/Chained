@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSMutableDictionary (AttributedString)
@@ -30,13 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSMutableDictionary *(^)(NSNumber *kern))fdKern;
 
 //删除线：默认0（无删除线）
-- (NSMutableDictionary *(^)(NSNumber *strikethroughStyle))fdStrikethroughStyle;
+- (NSMutableDictionary *(^)(NSUnderlineStyle strikethroughStyle))fdStrikethroughStyle;
 
 //删除线颜色
 - (NSMutableDictionary *(^)(UIColor *color))fdStrikethroughColor;
 
 //下划线：默认0（无下划线）
-- (NSMutableDictionary *(^)(NSNumber *underlineStyle))fdUnderlineStyle;
+- (NSMutableDictionary *(^)(NSUnderlineStyle underlineStyle))fdUnderlineStyle;
 
 //下划线颜色
 - (NSMutableDictionary *(^)(UIColor *color))fdUnderlineColor;

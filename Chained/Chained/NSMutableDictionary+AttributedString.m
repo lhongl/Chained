@@ -68,17 +68,17 @@
 }
 
 //删除线：默认0（无删除线）
-- (NSMutableDictionary *(^)(NSNumber *strikethroughStyle))fdStrikethroughStyle{
-    return ^(NSNumber *strikethroughStyle){
-        [self setValue:strikethroughStyle forKey:NSStrikethroughStyleAttributeName];
+- (NSMutableDictionary *(^)(NSUnderlineStyle strikethroughStyle))fdStrikethroughStyle{
+    return ^(NSUnderlineStyle strikethroughStyle){
+        [self setValue:@(strikethroughStyle) forKey:NSStrikethroughStyleAttributeName];
         return self;
     };
 }
 
 //下划线：默认0（无下划线）
-- (NSMutableDictionary *(^)(NSNumber *underlineStyle))fdUnderlineStyle{
-    return ^(NSNumber *underlineStyle){
-        [self setValue:underlineStyle forKey:NSUnderlineStyleAttributeName];
+- (NSMutableDictionary *(^)(NSUnderlineStyle underlineStyle))fdUnderlineStyle{
+    return ^(NSUnderlineStyle underlineStyle){
+        [self setValue:@(underlineStyle) forKey:NSUnderlineStyleAttributeName];
         return self;
     };
 }
