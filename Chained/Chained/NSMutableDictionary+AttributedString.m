@@ -22,14 +22,14 @@
 - (NSMutableDictionary *(^)(CGFloat fontSize))fdTextFont{
     
     return ^(CGFloat fontSize){
-        [self setValue:@(fontSize) forKey:NSFontAttributeName ];
+        [self setValue:[UIFont systemFontOfSize:fontSize] forKey:NSFontAttributeName ];
         return self;
     };
 }
 
-- (NSMutableDictionary *(^)(UIColor *textColor))fdTextColor{
-    return ^(UIColor *textColor){
-        [self setValue:textColor forKey:NSForegroundColorAttributeName ];
+- (NSMutableDictionary *(^)(UIColor *color))fdTextColor{
+    return ^(UIColor *color){
+        [self setValue:color forKey:NSForegroundColorAttributeName ];
         return self;
     };
 }
@@ -42,8 +42,8 @@
 }
 
 
-- (NSMutableDictionary *(^)(UIColor *textColor))fdBackgroundColor{
-    return ^(UIColor *textColor){
+- (NSMutableDictionary *(^)(UIColor *color))fdBackgroundColor{
+    return ^(UIColor *color){
         [self setValue:textColor forKey:NSBackgroundColorAttributeName ];
         return self;
     };

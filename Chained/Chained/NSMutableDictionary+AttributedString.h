@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSMutableDictionary *(^)(CGFloat fontSize))fdTextFont;
 
-- (NSMutableDictionary *(^)(UIColor *textColor))fdTextColor;
+- (NSMutableDictionary *(^)(UIColor *color))fdTextColor;
 
-- (NSMutableDictionary *(^)(UIColor *textColor))fdBackgroundColor;
+- (NSMutableDictionary *(^)(UIColor *color))fdBackgroundColor;
 
 //样式
 - (NSMutableDictionary *(^)(NSMutableParagraphStyle *style))fdParagraphStyle;
