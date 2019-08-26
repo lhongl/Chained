@@ -10,23 +10,20 @@
 
 @implementation UILabel (Chained)
 
-+ (UILabel *(^)(void))initLabel{
++ (__kindof UILabel *)initLabel{
     
-    return ^(void){
-        
-        return [[UILabel alloc] init];
-    };
+    return [[self alloc] init];
 }
 
-+ (UILabel *(^)(CGRect rect))initRectLabel{
++ (__kindof UILabel *(^)(CGRect rect))initRectLabel{
     
     return ^(CGRect rect){
         
-        return [[UILabel alloc] initWithFrame:rect];
+        return [[self alloc] initWithFrame:rect];
     };
 }
 
-- (UILabel *(^)(NSString *text))fdText{
+- (__kindof UILabel *(^)(NSString *text))fdText{
     
     return ^(NSString *text){
         self.text = text;
@@ -34,7 +31,7 @@
     };
 }
 
-- (UILabel *(^)(UIColor *textColor))fdTextColor{
+- (__kindof UILabel *(^)(UIColor *textColor))fdTextColor{
     
     return ^(UIColor *textColor){
         self.textColor = textColor;
@@ -42,7 +39,7 @@
     };
 }
 
-- (UILabel *(^)(UIColor *backColor))fdBackColor{
+- (__kindof UILabel *(^)(UIColor *backColor))fdBackColor{
    
     return ^(UIColor *backColor){
         self.backgroundColor = backColor;
@@ -50,7 +47,7 @@
     };
 }
 
-- (UILabel *(^)(CGRect rect))fdRect{
+- (__kindof UILabel *(^)(CGRect rect))fdRect{
     
     return ^(CGRect rect){
         self.frame = rect;
@@ -58,7 +55,7 @@
     };
 }
 
-- (UILabel *(^)(NSTextAlignment textAlignment))fdTextAlignment{
+- (__kindof UILabel *(^)(NSTextAlignment textAlignment))fdTextAlignment{
     
     return ^(NSTextAlignment textAlignment){
         self.textAlignment = textAlignment;
@@ -66,7 +63,7 @@
     };
 }
 
-- (UILabel *(^)(CGFloat fontSize))fdFont{
+- (__kindof UILabel *(^)(CGFloat fontSize))fdFont{
     
     return ^(CGFloat fontSize){
         self.font = [UIFont systemFontOfSize:fontSize];
@@ -74,7 +71,15 @@
     };
 }
 
-- (UILabel *(^)(BOOL enabled))fdEnabled{
+- (__kindof UILabel *(^)(CGFloat fontSize))fdBoldFont{
+    
+    return ^(CGFloat fontSize){
+        self.font = [UIFont boldSystemFontOfSize:fontSize];
+        return self;
+    };
+}
+
+- (__kindof UILabel *(^)(BOOL enabled))fdEnabled{
     
     return ^(BOOL enabled){
         self.enabled = enabled;
@@ -82,7 +87,7 @@
     };
 }
 
-- (UILabel *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
+- (__kindof UILabel *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
     
     return ^(BOOL userInteractionEnabled){
         self.userInteractionEnabled = userInteractionEnabled;
@@ -90,7 +95,7 @@
     };
 }
 
-- (UILabel *(^)(NSInteger numberOfLines))fdNumberOfLines{
+- (__kindof UILabel *(^)(NSInteger numberOfLines))fdNumberOfLines{
     
     return ^(NSInteger numberOfLines){
         self.numberOfLines = numberOfLines;
@@ -98,7 +103,7 @@
     };
 }
 
-- (UILabel *(^)(NSAttributedString *attributedText))fdAttributedText{
+- (__kindof UILabel *(^)(NSAttributedString *attributedText))fdAttributedText{
     
     return ^(NSAttributedString *attributedText){
         self.attributedText = attributedText;
@@ -106,7 +111,7 @@
     };
 }
 
-- (UILabel *(^)(CGFloat radius))fdRadius{
+- (__kindof UILabel *(^)(CGFloat radius))fdRadius{
     return ^(CGFloat radius){
         [self.layer setCornerRadius:radius];
         [self.layer setMasksToBounds:YES];
@@ -114,7 +119,7 @@
     };
 }
 
-- (UILabel *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
+- (__kindof UILabel *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
     return ^(CGFloat width, UIColor *color,CGFloat radius){
         [self.layer setBorderWidth:width];
         [self.layer setBorderColor:color.CGColor];

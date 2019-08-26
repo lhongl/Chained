@@ -10,22 +10,20 @@
 
 @implementation UITextView (Chained)
 
-+ (UITextView *(^)(void))initTextView{
-    return ^(void){
-        UITextView *textView = [[UITextView alloc] init];
-        return textView;
-    };
++ (__kindof UITextView *)initTextView{
+
+    return [[self alloc] init];;
 }
 
-+ (UITextView *(^)(CGRect rect))initRectTextView{
++ (__kindof UITextView *(^)(CGRect rect))initRectTextView{
     
     return ^(CGRect rect){
-        UITextView *textView = [[UITextView alloc] init];
-        return textView;
+
+        return [[self alloc] initWithFrame:rect];
     };
 }
 
-- (UITextView *(^)(CGRect rect))fdRect{
+- (__kindof UITextView *(^)(CGRect rect))fdRect{
     
     return ^(CGRect rect){
         self.frame = rect;
@@ -33,14 +31,14 @@
     };
 }
 
-- (UITextView *(^)(NSString *text))fdText{
+- (__kindof UITextView *(^)(NSString *text))fdText{
     return ^(NSString *text){
         self.text = text;
         return self;
     };
 }
 
-- (UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode{
+- (__kindof UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode{
     
     return ^(UIScrollViewKeyboardDismissMode keyboardDismissMode){
         self.keyboardDismissMode = keyboardDismissMode;
@@ -48,7 +46,7 @@
     };
 }
 
-- (UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType{
+- (__kindof UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType{
     
     return ^(UIKeyboardType keyboardType){
         self.keyboardType = keyboardType;
@@ -56,7 +54,7 @@
     };
 }
 
-- (UITextView *(^)(UIColor *textColor))fdTextColor{
+- (__kindof UITextView *(^)(UIColor *textColor))fdTextColor{
     
     return ^(UIColor *textColor){
         self.textColor = textColor;
@@ -64,7 +62,7 @@
     };
 }
 
-- (UITextView *(^)(UIColor *backColor))fdBackColor{
+- (__kindof UITextView *(^)(UIColor *backColor))fdBackColor{
     
     return ^(UIColor *backColor){
         self.backgroundColor = backColor;
@@ -72,7 +70,7 @@
     };
 }
 
-- (UITextView *(^)(NSTextAlignment textAlignment))fdTextAlignment{
+- (__kindof UITextView *(^)(NSTextAlignment textAlignment))fdTextAlignment{
     
     return ^(NSTextAlignment textAlignment){
         self.textAlignment = textAlignment;
@@ -80,7 +78,7 @@
     };
 }
 
-- (UITextView *(^)(CGFloat fontSize))fdFont{
+- (__kindof UITextView *(^)(CGFloat fontSize))fdFont{
     
     return ^(CGFloat fontSize){
         self.font = [UIFont systemFontOfSize:fontSize];
@@ -88,7 +86,7 @@
     };
 }
 
-- (UITextView *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
+- (__kindof UITextView *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
     
     return ^(BOOL userInteractionEnabled){
         self.userInteractionEnabled = userInteractionEnabled;
@@ -97,7 +95,7 @@
 }
 
 
-- (UITextView *(^)(id<UITextViewDelegate> delegate))fdDelegate{
+- (__kindof UITextView *(^)(id<UITextViewDelegate> delegate))fdDelegate{
     
     return ^(id<UITextViewDelegate> delegate){
         self.delegate = delegate;
@@ -105,14 +103,14 @@
     };
 }
 
-- (UITextView *(^)(BOOL secureTextEntry))fdSecureTextEntry{
+- (__kindof UITextView *(^)(BOOL secureTextEntry))fdSecureTextEntry{
     return ^(BOOL secureTextEntry){
         self.secureTextEntry = secureTextEntry;
         return self;
     };
 }
 
-- (UITextView *(^)(CGFloat radius))fdRadius{
+- (__kindof UITextView *(^)(CGFloat radius))fdRadius{
     return ^(CGFloat radius){
         [self.layer setCornerRadius:radius];
         [self.layer setMasksToBounds:YES];
@@ -120,7 +118,7 @@
     };
 }
 
-- (UITextView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
+- (__kindof UITextView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
     return ^(CGFloat width, UIColor *color,CGFloat radius){
         [self.layer setBorderWidth:width];
         [self.layer setBorderColor:color.CGColor];

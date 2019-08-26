@@ -10,23 +10,20 @@
 
 @implementation UITextField (Chained)
 
-+ (UITextField *(^)(void))initTextField{
++ (__kindof UITextField *)initTextField{
     
-    return ^(void){
-        
-        return [[UITextField alloc] init];
-    };
+    return [[self alloc] init];
 }
 
-+ (UITextField *(^)(CGRect rect))initRectTextField{
++ (__kindof UITextField *(^)(CGRect rect))initRectTextField{
     
     return ^(CGRect rect){
         
-        return [[UITextField alloc] initWithFrame:rect];
+        return [[self alloc] initWithFrame:rect];
     };
 }
 
-- (UITextField *(^)(NSString *text))fdText{
+- (__kindof UITextField *(^)(NSString *text))fdText{
     
     return ^(NSString *text){
         self.text = text;
@@ -34,7 +31,7 @@
     };
 }
 
-- (UITextField *(^)(UIColor *textColor))fdTextColor{
+- (__kindof UITextField *(^)(UIColor *textColor))fdTextColor{
     
     return ^(UIColor *textColor){
         self.textColor = textColor;
@@ -42,7 +39,7 @@
     };
 }
 
-- (UITextField *(^)(UIColor *backColor))fdBackColor{
+- (__kindof UITextField *(^)(UIColor *backColor))fdBackColor{
     
     return ^(UIColor *backColor){
         self.backgroundColor = backColor;
@@ -50,7 +47,7 @@
     };
 }
 
-- (UITextField *(^)(CGRect rect))fdRect{
+- (__kindof UITextField *(^)(CGRect rect))fdRect{
     
     return ^(CGRect rect){
         self.frame = rect;
@@ -58,7 +55,7 @@
     };
 }
 
-- (UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType{
+- (__kindof UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType{
     
     return ^(UIKeyboardType keyboardType){
         self.keyboardType = keyboardType;
@@ -66,7 +63,7 @@
     };
 }
 
-- (UITextField *(^)(NSTextAlignment textAlignment))fdTextAlignment{
+- (__kindof UITextField *(^)(NSTextAlignment textAlignment))fdTextAlignment{
     
     return ^(NSTextAlignment textAlignment){
         self.textAlignment = textAlignment;
@@ -74,7 +71,7 @@
     };
 }
 
-- (UITextField *(^)(CGFloat fontSize))fdFont{
+- (__kindof UITextField *(^)(CGFloat fontSize))fdFont{
     
     return ^(CGFloat fontSize){
         self.font = [UIFont systemFontOfSize:fontSize];
@@ -82,7 +79,7 @@
     };
 }
 
-- (UITextField *(^)(BOOL enabled))fdEnabled{
+- (__kindof UITextField *(^)(BOOL enabled))fdEnabled{
     
     return ^(BOOL enabled){
         self.enabled = enabled;
@@ -90,7 +87,7 @@
     };
 }
 
-- (UITextField *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
+- (__kindof UITextField *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled{
     
     return ^(BOOL userInteractionEnabled){
         self.userInteractionEnabled = userInteractionEnabled;
@@ -98,7 +95,7 @@
     };
 }
 
-- (UITextField *(^)(NSAttributedString *attributedText))fdAttributedText{
+- (__kindof UITextField *(^)(NSAttributedString *attributedText))fdAttributedText{
     
     return ^(NSAttributedString *attributedText){
         self.attributedText = attributedText;
@@ -106,7 +103,7 @@
     };
 }
 
-- (UITextField *(^)(UITextBorderStyle borderStyle))fdBorderStyle{
+- (__kindof UITextField *(^)(UITextBorderStyle borderStyle))fdBorderStyle{
     
     return ^(UITextBorderStyle borderStyle){
         self.borderStyle = borderStyle;
@@ -114,7 +111,7 @@
     };
 }
 
-- (UITextField *(^)(NSString *placeholder))fdPlaceholder{
+- (__kindof UITextField *(^)(NSString *placeholder))fdPlaceholder{
     
     return ^(NSString *placeholder){
         self.placeholder = placeholder;
@@ -122,7 +119,7 @@
     };
 }
 
-- (UITextField *(^)(BOOL clearsOnBeginEditing))fdClearsOnBeginEditing{
+- (__kindof UITextField *(^)(BOOL clearsOnBeginEditing))fdClearsOnBeginEditing{
     
     return ^(BOOL clearsOnBeginEditing){
         self.clearsOnBeginEditing = clearsOnBeginEditing;
@@ -130,7 +127,7 @@
     };
 }
 
-- (UITextField *(^)(id<UITextFieldDelegate> delegate))fdDelegate{
+- (__kindof UITextField *(^)(id<UITextFieldDelegate> delegate))fdDelegate{
     
     return ^(id<UITextFieldDelegate> delegate){
         self.delegate = delegate;
@@ -138,14 +135,14 @@
     };
 }
 
-- (UITextField *(^)(BOOL secureTextEntry))fdSecureTextEntry{
+- (__kindof UITextField *(^)(BOOL secureTextEntry))fdSecureTextEntry{
     return ^(BOOL secureTextEntry){
         self.secureTextEntry = secureTextEntry;
         return self;
     };
 }
 
-- (UITextField *(^)(CGFloat radius))fdRadius{
+- (__kindof UITextField *(^)(CGFloat radius))fdRadius{
     return ^(CGFloat radius){
         [self.layer setCornerRadius:radius];
         [self.layer setMasksToBounds:YES];
@@ -153,7 +150,7 @@
     };
 }
 
-- (UITextField *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
+- (__kindof UITextField *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
     return ^(CGFloat width, UIColor *color,CGFloat radius){
         [self.layer setBorderWidth:width];
         [self.layer setBorderColor:color.CGColor];

@@ -12,41 +12,41 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (Chained)
 
-+ (UITextField *(^)(void))initTextField;
++ (__kindof UITextField *)initTextField;
 
-+ (UITextField *(^)(CGRect rect))initRectTextField;
++ (__kindof UITextField *(^)(CGRect rect))initRectTextField;
 
-- (UITextField *(^)(NSString *text))fdText;
+- (__kindof UITextField *(^)(NSString *text))fdText;
 
-- (UITextField *(^)(UIColor *textColor))fdTextColor;
+- (__kindof UITextField *(^)(UIColor *textColor))fdTextColor;
 
-- (UITextField *(^)(UIColor *backColor))fdBackColor;
+- (__kindof UITextField *(^)(UIColor *backColor))fdBackColor;
 
-- (UITextField *(^)(CGRect rect))fdRect;
+- (__kindof UITextField *(^)(CGRect rect))fdRect;
 
-- (UITextField *(^)(NSTextAlignment textAlignment))fdTextAlignment;
+- (__kindof UITextField *(^)(NSTextAlignment textAlignment))fdTextAlignment;
 
-- (UITextField *(^)(CGFloat fontSize))fdFont;
+- (__kindof UITextField *(^)(CGFloat fontSize))fdFont;
 
-- (UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType;
+- (__kindof UITextField *(^)(UIKeyboardType keyboardType))fdKeyboardType;
 
-- (UITextField *(^)(BOOL enabled))fdEnabled;
+- (__kindof UITextField *(^)(BOOL enabled))fdEnabled;
 
-- (UITextField *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
+- (__kindof UITextField *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
 
-- (UITextField *(^)(NSAttributedString *attributedText))fdAttributedText;
+- (__kindof UITextField *(^)(NSAttributedString *attributedText))fdAttributedText;
 
-- (UITextField *(^)(UITextBorderStyle borderStyle))fdBorderStyle;
+- (__kindof UITextField *(^)(UITextBorderStyle borderStyle))fdBorderStyle;
 
-- (UITextField *(^)(NSString *placeholder))fdPlaceholder;
+- (__kindof UITextField *(^)(NSString *placeholder))fdPlaceholder;
 
-- (UITextField *(^)(BOOL clearsOnBeginEditing))fdClearsOnBeginEditing;
+- (__kindof UITextField *(^)(BOOL clearsOnBeginEditing))fdClearsOnBeginEditing;
 
-- (UITextField *(^)(id<UITextFieldDelegate> delegate))fdDelegate;
+- (__kindof UITextField *(^)(id<UITextFieldDelegate> delegate))fdDelegate;
 
-- (UITextField *(^)(CGFloat radius))fdRadius;
+- (__kindof UITextField *(^)(CGFloat radius))fdRadius;
 
-- (UITextField *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+- (__kindof UITextField *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
 @end
 

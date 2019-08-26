@@ -12,21 +12,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (Chained)
 
-+ (UIView *(^)(void))initView;
++ (__kindof UIView *)initView;
 
-+ (UIView *(^)(CGRect rect))initRectView;
++ (__kindof UIView *(^)(CGRect rect))initRectView;
 
-- (UIView *(^)(CGRect rect))fdRect;
+- (__kindof UIView *(^)(CGRect rect))fdRect;
 
-- (UIView *(^)(UIColor *color))fdBackColor;
+- (__kindof UIView *(^)(UIColor *color))fdBackColor;
 
-- (UIView *(^)(UIView *subView))fdAddSubView;
+- (__kindof UIView *(^)(UIView *subView))fdAddSubView;
 
-- (UIView *(^)(CGFloat radius))fdRadius;
+- (__kindof UIView *(^)(CGFloat radius))fdRadius;
 
-- (UIView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+- (__kindof UIView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
-- (UIView *(^)(SEL action))fdAddTagerAction;
+- (__kindof UIView *(^)(SEL action))fdAddTagerAction;
 
 - (void)fdAddTargetAction:(void(^)(UITapGestureRecognizer *TapGest))action;
 

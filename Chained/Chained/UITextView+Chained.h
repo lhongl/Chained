@@ -12,35 +12,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextView (Chained)
 
-+ (UITextView *(^)(void))initTextView;
++ (__kindof UITextView *)initTextView;
 
-+ (UITextView *(^)(CGRect rect))initRectTextView;
++ (__kindof UITextView *(^)(CGRect rect))initRectTextView;
 
-- (UITextView *(^)(CGRect rect))fdRect;
+- (__kindof UITextView *(^)(CGRect rect))fdRect;
 
-- (UITextView *(^)(NSString *text))fdText;
+- (__kindof UITextView *(^)(NSString *text))fdText;
 
-- (UITextView *(^)(UIColor *textColor))fdTextColor;
+- (__kindof UITextView *(^)(UIColor *textColor))fdTextColor;
 
-- (UITextView *(^)(UIColor *backColor))fdBackColor;
+- (__kindof UITextView *(^)(UIColor *backColor))fdBackColor;
 
-- (UITextView *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
+- (__kindof UITextView *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
 
-- (UITextView *(^)(CGFloat fontSize))fdFont;
+- (__kindof UITextView *(^)(CGFloat fontSize))fdFont;
 
-- (UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType;
+- (__kindof UITextView *(^)(UIKeyboardType keyboardType))fdKeyboardType;
 
-- (UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode;
+- (__kindof UITextView *(^)(UIScrollViewKeyboardDismissMode keyboardDismissMode))fdKeyboardDismissMode;
 
-- (UITextView *(^)(NSTextAlignment textAlignment))fdTextAlignment;
+- (__kindof UITextView *(^)(NSTextAlignment textAlignment))fdTextAlignment;
 
-- (UITextView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+- (__kindof UITextView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
-- (UITextView *(^)(CGFloat radius))fdRadius;
+- (__kindof UITextView *(^)(CGFloat radius))fdRadius;
 
-- (UITextView *(^)(BOOL secureTextEntry))fdSecureTextEntry;
+- (__kindof UITextView *(^)(BOOL secureTextEntry))fdSecureTextEntry;
 
-- (UITextView *(^)(id<UITextViewDelegate> delegate))fdDelegate;
+- (__kindof UITextView *(^)(id<UITextViewDelegate> delegate))fdDelegate;
 
 @end
 

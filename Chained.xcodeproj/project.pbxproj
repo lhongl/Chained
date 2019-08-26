@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6565D4012313E53F00E1FE2A /* UITextView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3F22313E53E00E1FE2A /* UITextView+Chained.m */; };
+		6565D4022313E53F00E1FE2A /* UITextField+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3F62313E53E00E1FE2A /* UITextField+Chained.m */; };
+		6565D4032313E53F00E1FE2A /* NSMutableParagraphStyle+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3F82313E53E00E1FE2A /* NSMutableParagraphStyle+Chained.m */; };
+		6565D4042313E53F00E1FE2A /* NSMutableDictionary+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3F92313E53E00E1FE2A /* NSMutableDictionary+AttributedString.m */; };
+		6565D4052313E53F00E1FE2A /* UILabel+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3FA2313E53E00E1FE2A /* UILabel+Chained.m */; };
+		6565D4062313E53F00E1FE2A /* UIView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3FB2313E53E00E1FE2A /* UIView+Chained.m */; };
+		6565D4072313E53F00E1FE2A /* UIButton+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565D3FC2313E53E00E1FE2A /* UIButton+Chained.m */; };
 		65CF061122C9D7B4007B4F5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF061022C9D7B4007B4F5E /* AppDelegate.m */; };
 		65CF061422C9D7B4007B4F5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF061322C9D7B4007B4F5E /* ViewController.m */; };
 		65CF061722C9D7B4007B4F5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65CF061522C9D7B4007B4F5E /* Main.storyboard */; };
@@ -15,13 +22,6 @@
 		65CF061F22C9D7B5007B4F5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF061E22C9D7B5007B4F5E /* main.m */; };
 		65CF062922C9D7B5007B4F5E /* ChainedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF062822C9D7B5007B4F5E /* ChainedTests.m */; };
 		65CF063422C9D7B5007B4F5E /* ChainedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF063322C9D7B5007B4F5E /* ChainedUITests.m */; };
-		65CF064322C9D7D1007B4F5E /* UIView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064222C9D7D1007B4F5E /* UIView+Chained.m */; };
-		65CF064622C9D977007B4F5E /* UILabel+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064522C9D977007B4F5E /* UILabel+Chained.m */; };
-		65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */; };
-		65CF064C22C9E2DD007B4F5E /* UIButton+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */; };
-		65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CF069322CAEC29007B4F5E /* UITextView+Chained.m */; };
-		65E936B122D49BD900A7A960 /* NSMutableParagraphStyle+Chained.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */; };
-		65E936B222D49BD900A7A960 /* NSMutableDictionary+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6503AB5C22CF23AE00E0B1BA /* HLChainedHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLChainedHeader.h; sourceTree = "<group>"; };
+		6565D3F22313E53E00E1FE2A /* UITextView+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Chained.m"; sourceTree = "<group>"; };
+		6565D3F32313E53E00E1FE2A /* UITextView+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Chained.h"; sourceTree = "<group>"; };
+		6565D3F42313E53E00E1FE2A /* UIButton+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chained.h"; sourceTree = "<group>"; };
+		6565D3F52313E53E00E1FE2A /* UITextField+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Chained.h"; sourceTree = "<group>"; };
+		6565D3F62313E53E00E1FE2A /* UITextField+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Chained.m"; sourceTree = "<group>"; };
+		6565D3F72313E53E00E1FE2A /* NSMutableDictionary+AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AttributedString.h"; sourceTree = "<group>"; };
+		6565D3F82313E53E00E1FE2A /* NSMutableParagraphStyle+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableParagraphStyle+Chained.m"; sourceTree = "<group>"; };
+		6565D3F92313E53E00E1FE2A /* NSMutableDictionary+AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AttributedString.m"; sourceTree = "<group>"; };
+		6565D3FA2313E53E00E1FE2A /* UILabel+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chained.m"; sourceTree = "<group>"; };
+		6565D3FB2313E53E00E1FE2A /* UIView+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chained.m"; sourceTree = "<group>"; };
+		6565D3FC2313E53E00E1FE2A /* UIButton+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chained.m"; sourceTree = "<group>"; };
+		6565D3FD2313E53E00E1FE2A /* FDChainedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDChainedHeader.h; sourceTree = "<group>"; };
+		6565D3FE2313E53E00E1FE2A /* NSMutableParagraphStyle+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableParagraphStyle+Chained.h"; sourceTree = "<group>"; };
+		6565D3FF2313E53E00E1FE2A /* UIView+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Chained.h"; sourceTree = "<group>"; };
+		6565D4002313E53E00E1FE2A /* UILabel+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chained.h"; sourceTree = "<group>"; };
 		65CF060C22C9D7B4007B4F5E /* Chained.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chained.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CF060F22C9D7B4007B4F5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65CF061022C9D7B4007B4F5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,20 +73,6 @@
 		65CF062F22C9D7B5007B4F5E /* ChainedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CF063322C9D7B5007B4F5E /* ChainedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainedUITests.m; sourceTree = "<group>"; };
 		65CF063522C9D7B5007B4F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65CF064122C9D7D1007B4F5E /* UIView+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Chained.h"; sourceTree = "<group>"; };
-		65CF064222C9D7D1007B4F5E /* UIView+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chained.m"; sourceTree = "<group>"; };
-		65CF064422C9D977007B4F5E /* UILabel+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chained.h"; sourceTree = "<group>"; };
-		65CF064522C9D977007B4F5E /* UILabel+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chained.m"; sourceTree = "<group>"; };
-		65CF064722C9DEDE007B4F5E /* UITextField+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Chained.h"; sourceTree = "<group>"; };
-		65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Chained.m"; sourceTree = "<group>"; };
-		65CF064A22C9E2DD007B4F5E /* UIButton+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chained.h"; sourceTree = "<group>"; };
-		65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chained.m"; sourceTree = "<group>"; };
-		65CF069222CAEC29007B4F5E /* UITextView+Chained.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Chained.h"; sourceTree = "<group>"; };
-		65CF069322CAEC29007B4F5E /* UITextView+Chained.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Chained.m"; sourceTree = "<group>"; };
-		65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableParagraphStyle+Chained.m"; sourceTree = "<group>"; };
-		65E936AE22D49BD900A7A960 /* NSMutableParagraphStyle+Chained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableParagraphStyle+Chained.h"; sourceTree = "<group>"; };
-		65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AttributedString.m"; sourceTree = "<group>"; };
-		65E936B022D49BD900A7A960 /* NSMutableDictionary+AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AttributedString.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,21 +158,21 @@
 		65E936B322D4AC6700A7A960 /* Chained */ = {
 			isa = PBXGroup;
 			children = (
-				6503AB5C22CF23AE00E0B1BA /* HLChainedHeader.h */,
-				65CF069222CAEC29007B4F5E /* UITextView+Chained.h */,
-				65CF069322CAEC29007B4F5E /* UITextView+Chained.m */,
-				65CF064122C9D7D1007B4F5E /* UIView+Chained.h */,
-				65CF064222C9D7D1007B4F5E /* UIView+Chained.m */,
-				65CF064A22C9E2DD007B4F5E /* UIButton+Chained.h */,
-				65CF064B22C9E2DD007B4F5E /* UIButton+Chained.m */,
-				65CF064722C9DEDE007B4F5E /* UITextField+Chained.h */,
-				65CF064822C9DEDE007B4F5E /* UITextField+Chained.m */,
-				65CF064422C9D977007B4F5E /* UILabel+Chained.h */,
-				65CF064522C9D977007B4F5E /* UILabel+Chained.m */,
-				65E936B022D49BD900A7A960 /* NSMutableDictionary+AttributedString.h */,
-				65E936AF22D49BD900A7A960 /* NSMutableDictionary+AttributedString.m */,
-				65E936AE22D49BD900A7A960 /* NSMutableParagraphStyle+Chained.h */,
-				65E936AD22D49BD800A7A960 /* NSMutableParagraphStyle+Chained.m */,
+				6565D3FD2313E53E00E1FE2A /* FDChainedHeader.h */,
+				6565D3F72313E53E00E1FE2A /* NSMutableDictionary+AttributedString.h */,
+				6565D3F92313E53E00E1FE2A /* NSMutableDictionary+AttributedString.m */,
+				6565D3FE2313E53E00E1FE2A /* NSMutableParagraphStyle+Chained.h */,
+				6565D3F82313E53E00E1FE2A /* NSMutableParagraphStyle+Chained.m */,
+				6565D3F42313E53E00E1FE2A /* UIButton+Chained.h */,
+				6565D3FC2313E53E00E1FE2A /* UIButton+Chained.m */,
+				6565D4002313E53E00E1FE2A /* UILabel+Chained.h */,
+				6565D3FA2313E53E00E1FE2A /* UILabel+Chained.m */,
+				6565D3F52313E53E00E1FE2A /* UITextField+Chained.h */,
+				6565D3F62313E53E00E1FE2A /* UITextField+Chained.m */,
+				6565D3F32313E53E00E1FE2A /* UITextView+Chained.h */,
+				6565D3F22313E53E00E1FE2A /* UITextView+Chained.m */,
+				6565D3FF2313E53E00E1FE2A /* UIView+Chained.h */,
+				6565D3FB2313E53E00E1FE2A /* UIView+Chained.m */,
 			);
 			path = Chained;
 			sourceTree = "<group>";
@@ -307,16 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E936B222D49BD900A7A960 /* NSMutableDictionary+AttributedString.m in Sources */,
+				6565D4072313E53F00E1FE2A /* UIButton+Chained.m in Sources */,
+				6565D4012313E53F00E1FE2A /* UITextView+Chained.m in Sources */,
+				6565D4052313E53F00E1FE2A /* UILabel+Chained.m in Sources */,
 				65CF061422C9D7B4007B4F5E /* ViewController.m in Sources */,
-				65CF064622C9D977007B4F5E /* UILabel+Chained.m in Sources */,
 				65CF061F22C9D7B5007B4F5E /* main.m in Sources */,
-				65E936B122D49BD900A7A960 /* NSMutableParagraphStyle+Chained.m in Sources */,
+				6565D4032313E53F00E1FE2A /* NSMutableParagraphStyle+Chained.m in Sources */,
+				6565D4062313E53F00E1FE2A /* UIView+Chained.m in Sources */,
+				6565D4022313E53F00E1FE2A /* UITextField+Chained.m in Sources */,
 				65CF061122C9D7B4007B4F5E /* AppDelegate.m in Sources */,
-				65CF069422CAEC29007B4F5E /* UITextView+Chained.m in Sources */,
-				65CF064922C9DEDE007B4F5E /* UITextField+Chained.m in Sources */,
-				65CF064C22C9E2DD007B4F5E /* UIButton+Chained.m in Sources */,
-				65CF064322C9D7D1007B4F5E /* UIView+Chained.m in Sources */,
+				6565D4042313E53F00E1FE2A /* NSMutableDictionary+AttributedString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

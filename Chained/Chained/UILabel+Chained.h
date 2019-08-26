@@ -12,33 +12,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (Chained)
 
-+ (UILabel *(^)(void))initLabel;
++ (__kindof UILabel *)initLabel;
 
-+ (UILabel *(^)(CGRect rect))initRectLabel;
++ (__kindof UILabel *(^)(CGRect rect))initRectLabel;
 
-- (UILabel *(^)(NSString *text))fdText;
+- (__kindof UILabel *(^)(NSString *text))fdText;
 
-- (UILabel *(^)(UIColor *textColor))fdTextColor;
+- (__kindof UILabel *(^)(UIColor *textColor))fdTextColor;
 
-- (UILabel *(^)(UIColor *backColor))fdBackColor;
+- (__kindof UILabel *(^)(UIColor *backColor))fdBackColor;
 
-- (UILabel *(^)(CGRect rect))fdRect;
+- (__kindof UILabel *(^)(CGRect rect))fdRect;
 
-- (UILabel *(^)(NSTextAlignment textAlignment))fdTextAlignment;
+- (__kindof UILabel *(^)(NSTextAlignment textAlignment))fdTextAlignment;
 
-- (UILabel *(^)(CGFloat fontSize))fdFont;
+- (__kindof UILabel *(^)(CGFloat fontSize))fdFont;
 
-- (UILabel *(^)(BOOL enabled))fdEnabled;
+- (__kindof UILabel *(^)(CGFloat fontSize))fdBoldFont;
 
-- (UILabel *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
+- (__kindof UILabel *(^)(BOOL enabled))fdEnabled;
 
-- (UILabel *(^)(NSInteger numberOfLines))fdNumberOfLines;
+- (__kindof UILabel *(^)(BOOL userInteractionEnabled))fdUserInteractionEnabled;
 
-- (UILabel *(^)(NSAttributedString *attributedText))fdAttributedText;
+- (__kindof UILabel *(^)(NSInteger numberOfLines))fdNumberOfLines;
 
-- (UILabel *(^)(CGFloat radius))fdRadius;
+- (__kindof UILabel *(^)(NSAttributedString *attributedText))fdAttributedText;
 
-- (UILabel *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+- (__kindof UILabel *(^)(CGFloat radius))fdRadius;
+
+- (__kindof UILabel *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
 @end
 

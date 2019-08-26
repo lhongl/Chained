@@ -20,23 +20,20 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
 @end
 @implementation UIView (Chained)
 
-+ (UIView *(^)(void))initView{
++ (__kindof UIView *)initView{
     
-    return ^(void){
-        
-        return [[UIView alloc] init];
-    };
+    return [[self alloc] init];
 }
 
-+ (UIView *(^)(CGRect rect))initRectView{
++ (__kindof UIView *(^)(CGRect rect))initRectView{
     
     return ^(CGRect rect){
         
-        return [[UIView alloc] initWithFrame:rect];
+        return [[self alloc] initWithFrame:rect];
     };
 }
 
-- (UIView *(^)(CGRect rect))fdRect{
+- (__kindof UIView *(^)(CGRect rect))fdRect{
     UIView *(^addFrame)(CGRect) = ^(CGRect rect){
         self.frame = rect;
         return self;
@@ -44,7 +41,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
     return addFrame;
 }
 
-- (UIView *(^)(UIColor *color))fdBackColor{
+- (__kindof UIView *(^)(UIColor *color))fdBackColor{
    
     return ^(UIColor *color){
         self.backgroundColor = color;
@@ -52,7 +49,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
     };
 }
 
-- (UIView *(^)(UIView *subView))fdAddSubView{
+- (__kindof UIView *(^)(UIView *subView))fdAddSubView{
     
     return ^(UIView *subView){
         [self addSubview:subView];
@@ -60,7 +57,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
     };
 }
 
-- (UIView *(^)(CGFloat radius))fdRadius{
+- (__kindof UIView *(^)(CGFloat radius))fdRadius{
     return ^(CGFloat radius){
         [self.layer setCornerRadius:radius];
         [self.layer setMasksToBounds:YES];
@@ -68,7 +65,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
     };
 }
 
-- (UIView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
+- (__kindof UIView *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
     return ^(CGFloat width, UIColor *color,CGFloat radius){
         [self.layer setBorderWidth:width];
         [self.layer setBorderColor:color.CGColor];
@@ -79,7 +76,7 @@ typedef void(^TapAction)(UITapGestureRecognizer *tapgest);
 }
 
 
-- (UIView *(^)(SEL action))fdAddTagerAction{
+- (__kindof UIView *(^)(SEL action))fdAddTagerAction{
     return ^(SEL action){
         UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:action];
         self.userInteractionEnabled = YES;

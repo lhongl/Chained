@@ -12,31 +12,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (Chained)
 
-+ (UIButton *(^)(UIButtonType buttonType))initButton;
++ (__kindof UIButton *(^)(UIButtonType buttonType))initButton;
 
-- (UIButton *(^)(CGRect rect))fdRect;
+- (__kindof UIButton *(^)(CGRect rect))fdRect;
 
-- (UIButton *(^)(UIColor *color))fdBackColor;
+- (__kindof UIButton *(^)(UIColor *color))fdBackColor;
 
-- (UIButton *(^)(NSString *title,UIControlState state))fdTitle;
+- (__kindof UIButton *(^)(NSString *title,UIControlState state))fdTitle;
 
-- (UIButton *(^)(UIImage *image,UIControlState state))fdImage;
+- (__kindof UIButton *(^)(NSString *title))fdTitles;
 
-- (UIButton *(^)(NSString *imageName,UIControlState state))fdImageName;
+- (__kindof UIButton *(^)(UIImage *image,UIControlState state))fdImage;
 
-- (UIButton *(^)(UIColor *color,UIControlState state))fdTitleColor;
+- (__kindof UIButton *(^)(NSString *imageName))fdImageName;
 
-- (UIButton *(^)(NSString *imageName,UIControlState state))fdBackgroundImageName;
+- (__kindof UIButton *(^)(UIColor *color,UIControlState state))fdTitleColor;
 
-- (UIButton *(^)(UIImage *image,UIControlState state))fdBackgroundImage;
+- (__kindof UIButton *(^)(UIColor *color))fdTitlesColor;
 
-- (UIButton *(^)(CGFloat fontSize))fdFontSize;
+- (__kindof UIButton *(^)(UIImage *image,UIControlState state))fdBackgroundImage;
 
-- (UIButton *(^)(SEL action,UIControlEvents controlEvents))addTargetAction;
+- (__kindof UIButton *(^)(NSString *imageName))fdBackgroundImageName;
 
-- (UIButton *(^)(CGFloat radius))fdRadius;
+- (__kindof UIButton *(^)(CGFloat fontSize))fdFont;
 
-- (UIButton *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
+- (__kindof UIButton *(^)(SEL action,UIControlEvents controlEvents))addTargetAction;
+
+- (__kindof UIButton *(^)(CGFloat radius))fdRadius;
+
+- (__kindof UIButton *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder;
 
 - (void)fdAddTargetAction:(UIControlEvents)controlEvents buttonAction:(void(^)(UIButton *button))action;
 

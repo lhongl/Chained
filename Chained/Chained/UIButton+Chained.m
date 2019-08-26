@@ -20,15 +20,15 @@ typedef void(^ButtonAction)(UIButton *button);
 @end
 @implementation UIButton (Chained)
 
-+ (UIButton *(^)(UIButtonType buttonType))initButton{
++ (__kindof UIButton *(^)(UIButtonType buttonType))initButton{
     
     return ^(UIButtonType buttonType){
         
-        return [UIButton buttonWithType:buttonType];
+        return [self buttonWithType:buttonType];
     };
 }
 
-- (UIButton *(^)(CGRect rect))fdRect{
+- (__kindof UIButton *(^)(CGRect rect))fdRect{
     
     return ^(CGRect rect){
         self.frame = rect;
@@ -36,14 +36,21 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
                 
-- (UIButton *(^)(NSString *title,UIControlState state))fdTitle{
+- (__kindof UIButton *(^)(NSString *title,UIControlState state))fdTitle{
     return ^(NSString *title,UIControlState state){
         [self setTitle:title forState:state];
         return self;
     };
 }
 
-- (UIButton *(^)(UIColor *color))fdBackColor{
+- (__kindof UIButton *(^)(NSString *title))fdTitles{
+    return ^(NSString *title){
+        [self setTitle:title forState:UIControlStateNormal];
+        return self;
+    };
+}
+
+- (__kindof UIButton *(^)(UIColor *color))fdBackColor{
     
     return ^(UIColor *color){
         self.backgroundColor = color;
@@ -51,7 +58,7 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
 
-- (UIButton *(^)(UIImage *image,UIControlState state))fdImage{
+- (__kindof UIButton *(^)(UIImage *image,UIControlState state))fdImage{
     
     return ^(UIImage *image,UIControlState state){
         [self setImage:image forState:state];
@@ -59,35 +66,42 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
 
-- (UIButton *(^)(NSString *imageName,UIControlState state))fdImageName{
-    return  ^(NSString *imageName,UIControlState state){
-        [self setImage:[UIImage imageNamed:imageName] forState:state];
+- (__kindof UIButton *(^)(NSString *imageName))fdImageName{
+    return  ^(NSString *imageName){
+        [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         return self;
     };
 }
 
-- (UIButton *(^)(UIColor *color,UIControlState state))fdTitleColor{
+- (__kindof UIButton *(^)(UIColor *color,UIControlState state))fdTitleColor{
     return  ^(UIColor *color,UIControlState state){
            [self setTitleColor:color forState:state];
         return self;
     };
 }
 
-- (UIButton *(^)(NSString *imageName,UIControlState state))fdBackgroundImageName{
-    return  ^(NSString *imageName,UIControlState state){
-        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:state];
+- (__kindof UIButton *(^)(UIColor *color))fdTitlesColor{
+    return  ^(UIColor *color){
+        [self setTitleColor:color forState:UIControlStateNormal];
         return self;
     };
 }
 
-- (UIButton *(^)(UIImage *image,UIControlState state))fdBackgroundImage{
+- (__kindof UIButton *(^)(NSString *imageName))fdBackgroundImageName{
+    return  ^(NSString *imageName){
+        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        return self;
+    };
+}
+
+- (__kindof UIButton *(^)(UIImage *image,UIControlState state))fdBackgroundImage{
     return  ^(UIImage *image,UIControlState state){
         [self setBackgroundImage:image forState:state];
         return self;
     };
 }
 
-- (UIButton *(^)(CGFloat fontSize))fdFontSize{
+- (__kindof UIButton *(^)(CGFloat fontSize))fdFont{
     
     return ^(CGFloat fontSize){
         self.titleLabel.font = [UIFont systemFontOfSize:fontSize];
@@ -95,14 +109,14 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
 
-- (UIButton *(^)(SEL action,UIControlEvents controlEvents))addTargetAction{
+- (__kindof UIButton *(^)(SEL action,UIControlEvents controlEvents))addTargetAction{
     return ^(SEL action,UIControlEvents controlEvents){
         [self addTarget:self action:action forControlEvents:controlEvents];
         return self;
     };
 }
 
-- (UIButton *(^)(CGFloat radius))fdRadius{
+- (__kindof UIButton *(^)(CGFloat radius))fdRadius{
     return ^(CGFloat radius){
         [self.layer setCornerRadius:radius];
         [self.layer setMasksToBounds:YES];
@@ -110,7 +124,7 @@ typedef void(^ButtonAction)(UIButton *button);
     };
 }
 
-- (UIButton *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
+- (__kindof UIButton *(^)(CGFloat width, UIColor *color,CGFloat radius))fdRadiusOrBorder{
     return ^(CGFloat width, UIColor *color,CGFloat radius){
         [self.layer setBorderWidth:width];
         [self.layer setBorderColor:color.CGColor];
